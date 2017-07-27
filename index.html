@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>demo</title>
+	<link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/jquery.Jcrop.min.css" rel="stylesheet">
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="js/jqueryJcrop.min.js"></script> -->
+	<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="upload.js" type='text/javascript'></script>
+	<style>
+		.dropzone {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			z-index: 100;
+			border: 3px dashed transparent;
+			transition: background 0.5s;
+		}
+		.dropzone.show {
+			border-color: #f3f3f3;
+			background-color: rgba(255,255,255,0.9);
+			color: #acacac;
+			z-index: 9999;
+		}
+		.dropzone.error {
+			border-color: pink;
+			background-color: rgba(255,200,0,0.8);
+			color: red;
+			z-index:9999;
+		}
+		.tips-message {
+			font-size: 25px;
+			pointer-events: none;
+		}
+		.drag {
+			width: 200px;
+			height: 200px;
+			background-color: red;
+		}
+		.dp-n {
+			display: none!important;
+		}
+		.image-thumbnail {
+			width: 250px;
+			height: 250px;
+			position:relative;
+			z-index:999;
+			border: 2px dashed #ccc;
+			padding: 5px;
+		}
+		.page {
+			display: flex;
+			flex-flow: column;
+			justify-content: center;
+			align-items: center;
+		}
+		.content {
+			position:relative;
+		}
+		.center {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%,-50%);
+		}
+		.selectImg {
+		    width: 120px;
+		    line-height: 38px;
+		    position: relative;
+		    z-index: 999;
+		    background: skyblue;
+		    color: #fff;
+		    margin-top: 25px;
+		}
+		.uploadTitle {
+			font-size: 25px;
+			font-weight: bold;
+			color: #333;
+		}
+		.mt-25 {
+			margin-top: 25px;
+		}
+		.previewImg {
+			width: 100%;
+			height: auto;
+
+		}
+		.testTooltips {
+			width: 250px;
+			height: auto;
+			position: relative;
+			z-index:9999;
+		}
+		.tooltipTitle {
+			color: skyblue;
+		}
+		.jcrop {
+			width: 500px;
+			height: auto;
+			position: relative;
+			z-index: 9999;
+		}
+		.content {
+			padding: 127px;
+		}
+		.content .btn{
+			cursor: pointer;
+			position: relative;
+			z-index: 9999;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="content text-center">
+			<div class="dropzone"></div>
+			<div class="progress">
+				<div class="progress-bar" role="progressbar"></div>
+			</div>
+			<div class="page page-one">
+				<div class="uploadTitle">上传图片</div>
+				<div class="image-thumbnail mt-25">
+					<img src="image/5-121204193Q9-50.gif" alt="loading" class="center dp-n loading">
+				</div>
+				<label for="uploadFile" class=selectImg>选择一张图片</label>
+				<input type="file" id="uploadFile" class='dp-n'>
+				<div class="prevStep"></div>
+				<div class="nextStep"></div>
+			</div>
+			<div class="footer">
+				<div class="btn btn-info prev">上一个</div>
+				<div class="btn btn-info next">下一个</div>
+			</div>
+		</div>
+	</div>
+	<script>
+	$(function(){
+		// $('.dropzone').uploadImg({
+		// 	tips:{
+		// 		formatError:'<div class="tips-message center">对不起，不接受此文件</div>',
+		// 		exceedNum:'<div class="tips-message center">亲！一次上传一张图片哦</div>',
+		// 		exceedSize:'<div class="tips-message center">图片不能大于5MB</div>',
+		// 		loading:'<div class="tips-message center">正在上传中...</div>',
+		// 		dragging:'<div class="tips-message center">放下上传</div>'
+		// 	}
+		// },function(){
+		// 	console.log(1)
+		// });
+		// $("[data-toggle='tooltip']").tooltip({
+		
+		// })
+		// //选择图片事件
+		// $('#uploadFile').on('change',function(e){
+
+		// })
+		// $('.nextStep').on('click',function(){
+		// 	if($('.page').data('status')=='completed'){
+		// 		//跳转到下一个页面
+		// 	}
+		// })
+		// $('#element').Jcrop({
+		// 	allowSelect: true
+		// });
+	})
+	</script>
+</body>
+</html>
